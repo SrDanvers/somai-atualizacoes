@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 12,
-  "latestVersionName": "1.9.1",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.1/Somai.1.9.1.apk",
-  "apkSha256": "96eb44ecc707520238c802f437f56b5e5d2ee77b94c25d01143b563c56c21895",
-  "releaseNotes": "Primeira atualização online do Somaí. Melhorias de estabilidade e identificação da versão instalada.",
-  "publishedAt": "2026-11-02T20:07:51Z"
+  "latestVersionCode": 13,
+  "latestVersionName": "1.9.2",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.2/Somai.1.9.2.apk",
+  "apkSha256": "11169559042c869f2cfcff98ef585615db0093e455f2fb30dcd391ebaf23ef11",
+  "releaseNotes": "Backup local JSON, restauracao com confirmacao, pesquisa no historico de compras e exportacao CSV.",
+  "publishedAt": "2026-11-02T20:35:34Z"
 }
