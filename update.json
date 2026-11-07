@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 13,
-  "latestVersionName": "1.9.2",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.2/Somai.1.9.2.apk",
-  "apkSha256": "11169559042c869f2cfcff98ef585615db0093e455f2fb30dcd391ebaf23ef11",
-  "releaseNotes": "Backup local JSON, restauracao com confirmacao, pesquisa no historico de compras e exportacao CSV.",
-  "publishedAt": "2026-11-02T20:35:34Z"
+  "latestVersionCode": 16,
+  "latestVersionName": "1.9.5",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.5/Somai-1.9.5.apk",
+  "apkSha256": "7362483643b65eeeee5fd7977ff0ffd67840dccbc635619d0767aad853c5323b",
+  "releaseNotes": "Alertas de limite aos 80%, 100% e acima do orçamento, com som e vibração configuráveis.; Scanner de etiquetas em sequência com confirmação antes de salvar.; Descontos percentuais, leve 3/pague 2 e preços por quantidade.; Comparação de embalagens por kg, litro ou unidade.; Desfazer exclusão de produtos por oito segundos.; Sons curtos locais e preferências independentes para sons, vibração e sequência.; Aprimoramentos de compatibilidade do backup e dos valores líquidos enviados ao Desktop.",
+  "publishedAt": "2026-11-07T17:07:50Z"
 }
