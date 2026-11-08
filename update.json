@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 17,
-  "latestVersionName": "1.9.6",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.6/Somai-1.9.6.apk",
-  "apkSha256": "d733a42020d450c98643626ed6189a24b8c3b2c326ae5d1a77135fb434ddb3f7",
-  "releaseNotes": "Scanner inteligente com leitura de etiquetas, códigos de barras e QR Code fiscal.; Cadastro local de produtos por código de barras, com conferência de preço.; Ferramentas NFC para atalhos e produtos favoritos em aparelhos compatíveis.; Organização aprimorada dos controles da câmera.; Mantidos orçamento, promoções, histórico, sons e vibrações.",
-  "publishedAt": "2026-11-08T01:08:17Z"
+  "latestVersionCode": 18,
+  "latestVersionName": "1.9.7",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.7/Somai-1.9.7.apk",
+  "apkSha256": "32bfb11b13d520cfdceb42f51e0dd09478125f6f1e542353ddb0b08ed880becb",
+  "releaseNotes": "Captura automática de etiquetas pela câmera, sem tocar no botão de fotografia.; Validação de leituras consistentes antes da conferência de nome e preço.; Botão de captura manual mantido como alternativa.; Continuidade de escaneamento e sons configuráveis.; Mantidos código de barras, NFC, QR Code fiscal, orçamento e histórico da 1.9.6.",
+  "publishedAt": "2026-11-08T01:08:42Z"
 }
