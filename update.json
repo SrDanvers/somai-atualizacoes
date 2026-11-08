@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 16,
-  "latestVersionName": "1.9.5",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.5/Somai-1.9.5.apk",
-  "apkSha256": "7362483643b65eeeee5fd7977ff0ffd67840dccbc635619d0767aad853c5323b",
-  "releaseNotes": "Alertas de limite aos 80%, 100% e acima do orçamento, com som e vibração configuráveis.; Scanner de etiquetas em sequência com confirmação antes de salvar.; Descontos percentuais, leve 3/pague 2 e preços por quantidade.; Comparação de embalagens por kg, litro ou unidade.; Desfazer exclusão de produtos por oito segundos.; Sons curtos locais e preferências independentes para sons, vibração e sequência.; Aprimoramentos de compatibilidade do backup e dos valores líquidos enviados ao Desktop.",
-  "publishedAt": "2026-11-07T17:07:50Z"
+  "latestVersionCode": 17,
+  "latestVersionName": "1.9.6",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.6/Somai-1.9.6.apk",
+  "apkSha256": "d733a42020d450c98643626ed6189a24b8c3b2c326ae5d1a77135fb434ddb3f7",
+  "releaseNotes": "Scanner inteligente com leitura de etiquetas, códigos de barras e QR Code fiscal.; Cadastro local de produtos por código de barras, com conferência de preço.; Ferramentas NFC para atalhos e produtos favoritos em aparelhos compatíveis.; Organização aprimorada dos controles da câmera.; Mantidos orçamento, promoções, histórico, sons e vibrações.",
+  "publishedAt": "2026-11-08T01:08:17Z"
 }
