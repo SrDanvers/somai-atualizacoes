@@ -1,11 +1,11 @@
 {
-  "schemaVersion": 1,
-  "applicationId": "br.com.denny.somai",
-  "enabled": true,
-  "latestVersionCode": 18,
-  "latestVersionName": "1.9.7",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.7/Somai-1.9.7.apk",
-  "apkSha256": "32bfb11b13d520cfdceb42f51e0dd09478125f6f1e542353ddb0b08ed880becb",
-  "releaseNotes": "Captura automática de etiquetas pela câmera, sem tocar no botão de fotografia.; Validação de leituras consistentes antes da conferência de nome e preço.; Botão de captura manual mantido como alternativa.; Continuidade de escaneamento e sons configuráveis.; Mantidos código de barras, NFC, QR Code fiscal, orçamento e histórico da 1.9.6.",
-  "publishedAt": "2026-11-08T01:08:42Z"
+    "schemaVersion":  1,
+    "applicationId":  "br.com.denny.somai",
+    "enabled":  true,
+    "latestVersionCode":  21,
+    "latestVersionName":  "1.9.10",
+    "apkUrl":  "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.10/Somai-1.9.10.apk",
+    "apkSha256":  "cdc3d8bb3a7932e5613b82a785a441584dfc5089345dc8fb0c6ec12bcbbef94e",
+    "releaseNotes":  "Favoritos, histórico de preços e telas de atualização e ajuda aprimoradas.",
+    "publishedAt":  "2026-11-11T20:36:31Z"
 }
