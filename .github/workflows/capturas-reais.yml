@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - ".github/workflows/capturas-reais.yml"
+      - ".github/scripts/capturar-somai.sh"
 
 permissions:
   contents: write
