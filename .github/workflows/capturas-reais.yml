@@ -1,0 +1,90 @@
+name: Somaí - capturas reais do aplicativo
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/capturas-reais.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  capturar:
+    name: Capturar telas reais do APK no Android
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+
+      - name: Ativar aceleração do emulador
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Baixar e verificar APK original publicado
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --retry-delay 3 \
+            --output somai-1.9.7.apk \
+            "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.7/Somai-1.9.7.apk"
+          echo "32bfb11b13d520cfdceb42f51e0dd09478125f6f1e542353ddb0b08ed880becb  somai-1.9.7.apk" | sha256sum -c -
+
+      - name: Executar aplicativo e fotografar telas
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: bash .github/scripts/capturar-somai.sh
+
+      - name: Inserir capturas reais na apresentação do repositório
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          s = p.read_text(encoding='utf-8')
+          a = '<!-- SOMAI_REAL_SCREENSHOTS_START -->'
+          b = '<!-- SOMAI_REAL_SCREENSHOTS_END -->'
+          if a not in s or b not in s:
+              raise SystemExit('Marcadores das capturas ausentes no README.')
+          gallery = '''
+          <div align="center">
+            <a href="docs/capturas/somai-inicio.png"><img src="docs/capturas/somai-inicio.png" alt="Captura real da página inicial do Somaí" width="235"></a>
+            <a href="docs/capturas/somai-menu-mais.png"><img src="docs/capturas/somai-menu-mais.png" alt="Captura real do menu Mais do Somaí" width="235"></a>
+            <a href="docs/capturas/somai-inicio-recursos.png"><img src="docs/capturas/somai-inicio-recursos.png" alt="Captura real da área de recursos do Somaí" width="235"></a>
+          </div>
+
+          <p align="center"><sub>Capturas reais feitas a partir do APK público Somaí 1.9.7, em um emulador Android limpo. Clique nas imagens para ampliar.</sub></p>
+          '''
+          prefix, remainder = s.split(a, 1)
+          _, suffix = remainder.split(b, 1)
+          p.write_text(prefix + a + '\n' + gallery.strip() + '\n' + b + suffix, encoding='utf-8')
+          PY
+
+      - name: Publicar capturas e apresentação
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/capturas/*.png
+          if git diff --cached --quiet; then
+            echo "Sem alterações."
+            exit 0
+          fi
+          git commit -m "docs: publicar capturas reais do Somaí 1.9.7"
+          git push origin HEAD:main
+
+      - name: Guardar capturas para conferência
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fotos-reais-somai
+          path: docs/capturas/*.png
+          if-no-files-found: ignore
