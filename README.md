@@ -45,7 +45,13 @@ A proposta é concentrar recursos úteis em uma interface clara, com funções i
 As imagens desta seção vêm **do aplicativo Somaí em execução**, não de telas conceituais nem de ilustrações. A versão capturada será identificada junto das imagens.
 
 <!-- SOMAI_REAL_SCREENSHOTS_START -->
-*Capturas reais em preparação. Elas serão adicionadas aqui após a execução do aplicativo no emulador Android.*
+<div align="center">
+  <a href="docs/capturas/somai-inicio.png"><img src="docs/capturas/somai-inicio.png" alt="Captura real da página inicial do Somaí" width="235"></a>
+  <a href="docs/capturas/somai-menu-mais.png"><img src="docs/capturas/somai-menu-mais.png" alt="Captura real do menu Mais do Somaí" width="235"></a>
+  <a href="docs/capturas/somai-inicio-recursos.png"><img src="docs/capturas/somai-inicio-recursos.png" alt="Captura real da área de recursos do Somaí" width="235"></a>
+</div>
+
+<p align="center"><sub>Capturas reais feitas a partir do APK público Somaí 1.9.7, em um emulador Android limpo. Clique nas imagens para ampliar.</sub></p>
 <!-- SOMAI_REAL_SCREENSHOTS_END -->
 
 ## Como instalar
