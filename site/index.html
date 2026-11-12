@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR" data-type="software" data-radius="round" data-buttons="pill" data-motion>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Somaí · Controle de compras no Android</title>
+  <meta name="description" content="Conheça o Somaí para Android. Veja como escanear produtos, acompanhar o total da compra e instalar a versão disponível.">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
+  <meta name="theme-color" content="#0b211b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Somaí · Controle de compras no Android">
+  <meta property="og:description" content="Confira preços e saiba quanto vai pagar antes do caixa.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/SrDanvers/somai-atualizacoes/main/docs/capturas/somai-inicio.png">
+  <link rel="icon" href="assets/somai/marca.png" type="image/png">
+  <link rel="stylesheet" href="assets/system.css">
+  <link rel="stylesheet" href="assets/motion/motion.css">
+  <link rel="stylesheet" href="assets/layout/layout.css">
+  <link rel="stylesheet" href="assets/somai.css">
+  <script>
+    document.documentElement.classList.add('m-enter');
+    setTimeout(() => document.documentElement.classList.add('m-enter-done'), 700);
+  </script>
+  <script type="module" src="assets/motion/motion.js"></script>
+  <script type="module" src="assets/moments/moments.js"></script>
+  <script type="module" src="assets/somai.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-nav">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <a class="site-logo" href="#inicio">
+        <img src="assets/somai/marca.png" width="38" height="38" alt="">
+        <span>Somaí</span>
+      </a>
+      <nav aria-label="Menu principal">
+        <a href="#recursos">Recursos</a>
+        <a href="#como-usar">Como usar</a>
+        <a href="#instalacao">Instalação</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="hero hero--collage" id="inicio" aria-labelledby="hero-titulo" data-enter>
+      <div class="wrap">
+        <div class="hero-text hero__grid somai-hero">
+          <div class="hero__text">
+            <h1 id="hero-titulo">Sua compra
+              <em>sob controle.</em></h1>
+            <p class="hero__lead">Some os itens no carrinho, confira preços e veja quanto vai pagar antes de chegar ao caixa.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.15/Somai-1.9.15.apk">Baixar APK <span class="download-mark" aria-hidden="true">↓</span></a>
+              <a class="btn btn--secondary store-button" href="#google-play" data-google-play>
+                <span data-play-label>Google Play</span>
+                <span class="store-status" data-play-pending>Em breve</span>
+              </a>
+            </div>
+            <p class="hero__proof">Android 6.0 ou superior <span aria-hidden="true">·</span> Versão 1.9.15</p>
+          </div>
+          <div class="hero__art somai-stage" data-visual>
+            <div class="stage-orbits" aria-hidden="true"></div>
+            <figure class="phone hero-phone">
+              <img src="assets/somai/somai-inicio.webp" width="693" height="1540" alt="Tela inicial do Somaí com total do carrinho, scanner e atalhos de compra" fetchpriority="high" data-source="client">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features ground-inverse" id="recursos" aria-labelledby="recursos-titulo">
+      <div class="wrap">
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <h2 id="recursos-titulo">Preços, limite<br>e histórico.</h2>
+            <dl class="feature-list">
+              <div>
+                <dt>Leitura pela câmera</dt>
+                <dd>Escaneie códigos de barras e etiquetas de preço. Confira o produto e o valor antes de adicionar ao carrinho.</dd>
+              </div>
+              <div>
+                <dt>Orçamento da compra</dt>
+                <dd>Veja o total subir a cada item e receba avisos ao se aproximar do limite que você definiu.</dd>
+              </div>
+              <div>
+                <dt>Histórico e cupons</dt>
+                <dd>Consulte compras anteriores e guarde cupons fiscais para conferir depois.</dd>
+              </div>
+            </dl>
+            <div class="screen-tabs" role="tablist" aria-label="Telas do Somaí">
+              <button type="button" role="tab" id="tab-atalhos" aria-controls="tela-atalhos" aria-selected="true">Acesso rápido</button>
+              <button type="button" role="tab" id="tab-menu" aria-controls="tela-menu" aria-selected="false" tabindex="-1">Menu Mais</button>
+            </div>
+          </div>
+          <div class="screen-stage">
+            <div role="tabpanel" id="tela-atalhos" aria-labelledby="tab-atalhos">
+              <figure class="phone">
+                <img src="assets/somai/somai-inicio-recursos.webp" width="693" height="1540" alt="Atalhos do Somaí para adicionar produtos, ler códigos, consultar cupons e abrir o histórico" data-source="client">
+              </figure>
+            </div>
+            <div role="tabpanel" id="tela-menu" aria-labelledby="tab-menu" hidden>
+              <figure class="phone">
+                <img src="assets/somai/somai-menu-mais.webp" width="693" height="1540" alt="Menu Mais com comparação de embalagens, cupons e backup" data-source="client">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide content-section" id="como-usar" aria-labelledby="guia-titulo">
+      <div class="wrap">
+        <div class="guide-grid">
+          <div class="content-heading">
+            <h2 id="guia-titulo">Como usar o Somaí</h2>
+            <p>Faça a compra com o total à vista, do primeiro item até o caixa.</p>
+          </div>
+          <ol class="guide-steps">
+            <li>
+              <div>
+                <h3>Defina seu limite</h3>
+                <p>Na tela inicial, toque em <strong>Definir limite</strong> e informe quanto pretende gastar.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Adicione os produtos</h3>
+                <p>Abra o <strong>Scanner inteligente</strong> para usar a câmera ou toque em <strong>Adicionar item</strong> para digitar nome, preço e quantidade.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Confira o total</h3>
+                <p>Revise os itens e o valor do carrinho antes de pagar. Para comparar tamanhos e preços por kg, litro ou unidade, abra <strong>Mais</strong> e escolha <strong>Comparar embalagens</strong>.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section install ground-inverse content-section" id="instalacao" aria-labelledby="instalacao-titulo">
+      <div class="wrap">
+        <div class="content-heading">
+          <h2 id="instalacao-titulo">Instale no Android</h2>
+          <p data-play-pending>O APK oficial do Somaí está disponível pelo GitHub. O lançamento na Google Play está em preparação.</p>
+          <p data-play-available hidden>Escolha entre o APK oficial pelo GitHub e a instalação pela Google Play.</p>
+        </div>
+        <div class="download-grid">
+          <article class="download-option apk-option" aria-labelledby="apk-titulo">
+            <h3 id="apk-titulo">APK pelo GitHub</h3>
+            <p>Versão 1.9.15 para Android 6.0 ou superior.</p>
+            <ol>
+              <li>Toque em <strong>Baixar APK</strong> no seu celular.</li>
+              <li>Abra o arquivo <strong>Somai-1.9.15.apk</strong> em Downloads.</li>
+              <li>Siga as instruções do instalador do Android para concluir.</li>
+            </ol>
+            <a class="btn btn--primary" href="https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.15/Somai-1.9.15.apk">Baixar APK <span class="download-mark" aria-hidden="true">↓</span></a>
+          </article>
+
+          <article class="download-option play-option" id="google-play" tabindex="-1" aria-labelledby="play-titulo">
+            <h3 id="play-titulo">Google Play</h3>
+            <p class="store-availability" data-play-pending>Em breve</p>
+            <p data-play-pending>Quando o Somaí estiver disponível na loja, o botão Google Play abrirá a página oficial do aplicativo.</p>
+            <p data-play-available hidden>Abra a página do Somaí na loja e toque em <strong>Instalar</strong>.</p>
+            <a class="btn btn--primary" data-google-play data-play-available hidden>Baixar na Google Play</a>
+          </article>
+        </div>
+        <a class="text-link android-help" href="https://support.google.com/android/answer/9457058?hl=pt-BR">Veja a ajuda do Android sobre instalação</a>
+      </div>
+    </section>
+
+    <section class="section release" id="novidades" aria-labelledby="novidades-titulo" data-moment="word-highlight">
+      <div class="wrap">
+        <div class="release-grid">
+          <div>
+            <h2 id="novidades-titulo">Novidades da 1.9.15</h2>
+            <p class="mo-wh__text">Na primeira abertura, a logo animada aparece por <strong>seis segundos</strong>. Depois, o Somaí abre direto na tela principal.</p>
+            <a class="btn btn--secondary release-notes" href="https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v1.9.15">Ver notas da versão</a>
+          </div>
+          <div class="release-art" aria-hidden="true">
+            <img src="assets/somai/marca.png" width="216" height="216" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq ground-inverse content-section" id="duvidas" aria-labelledby="duvidas-titulo">
+      <div class="wrap">
+        <div class="content-heading">
+          <h2 id="duvidas-titulo">Dúvidas frequentes</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Preciso criar uma conta para usar?</summary>
+            <p>Você pode montar o carrinho, definir o limite e consultar seu histórico sem criar uma conta.</p>
+          </details>
+          <details>
+            <summary>O código de barras mostra o preço da loja?</summary>
+            <p>O código ajuda a identificar o produto. Para registrar o preço da loja, escaneie a etiqueta da prateleira ou digite o valor que você conferiu.</p>
+          </details>
+          <details>
+            <summary>O Somaí funciona sem internet?</summary>
+            <p>O carrinho, os cálculos e o histórico funcionam no aparelho. Consultas externas, como a verificação de atualizações e a consulta de cupons em serviços fiscais, precisam de conexão.</p>
+          </details>
+          <details>
+            <summary>Onde ativo o modo escuro?</summary>
+            <p>Na tela inicial, toque no botão de tema ao lado de <strong>Mais</strong> para alternar entre o modo claro e o escuro.</p>
+          </details>
+          <details>
+            <summary>Como atualizo uma instalação pelo APK?</summary>
+            <p>Baixe o novo APK pelo GitHub e instale por cima da versão oficial que já está no aparelho. Para o Android aceitar a atualização e preservar os dados, os dois APKs precisam ter a mesma assinatura.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-identity">
+        <strong>Somaí</strong>
+        <span>Desenvolvido por Denny Ximenes</span>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="#instalacao">Instalação</a>
+        <a href="#novidades">Novidades</a>
+        <a href="https://github.com/SrDanvers/somai-atualizacoes/releases/latest">Versões no GitHub</a>
+      </nav>
+      <small>Capturas reais do Somaí 1.9.7</small>
+    </div>
+  </footer>
+</body>
+</html>

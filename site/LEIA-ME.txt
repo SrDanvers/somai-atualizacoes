@@ -1,0 +1,24 @@
+﻿SOMAÍ | SITE PRONTO PARA PUBLICAR
+
+1. Extraia este ZIP.
+2. Na hospedagem, publique a pasta que contém index.html e assets.
+   Mantenha o index.html na raiz e preserve a pasta assets inteira.
+3. Se a hospedagem pedir configurações, escolha um site estático.
+   A pasta publicada é a que contém o index.html. Deixe o comando de build vazio.
+4. Abra o endereço que a hospedagem gerar e confira a galeria e os dois botões.
+
+O botão Baixar APK baixa o Somaí 1.9.15 pelo GitHub.
+O botão Google Play mostra Em breve e abre o aviso de lançamento.
+
+QUANDO O SOMAÍ SAIR NA GOOGLE PLAY
+
+Abra assets/downloads.js e coloque o link oficial do Somaí entre as aspas de
+playStoreUrl. Publique a pasta novamente. O botão passará a abrir a loja.
+
+PARA EDITAR O VISUAL COM O CODEX
+
+Abra a pasta extraída no terminal com o Node.js e instale o Taste Skill.
+
+npx skills add Leonxlnx/taste-skill --skill design-taste-frontend -a codex
+
+Abra a pasta no Codex e peça para aplicar design-taste-frontend à página.
