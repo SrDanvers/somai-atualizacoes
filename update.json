@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 28,
-  "latestVersionName": "1.9.14",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.14/Somai-1.9.14.apk",
-  "apkSha256": "9864de4192e34d74b6e7d958b53282fd8ded074f5c044c6d116655b4f554a226",
-  "releaseNotes": "Listas reutilizáveis com checklist, importação de texto e compartilhamento.; Nova lista a partir de uma compra do histórico, com estimativa de total.; Comparação dos últimos preços registrados por supermercado.; Gastos e limites por categoria, com alertas de orçamento.; Busca nos favoritos por nome ou código de barras.; Backup de listas, limites, favoritos e preços, compatível com os arquivos anteriores.",
-  "publishedAt": "2026-11-12T11:58:21Z"
+  "latestVersionCode": 30,
+  "latestVersionName": "1.9.15",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.15/Somai-1.9.15.apk",
+  "apkSha256": "c622a94ce83a333e52ee7bd2e5707a3eed7ea0a0d63148ee5e3083e21f6072ec",
+  "releaseNotes": "A logo animada do Somaí aparece por seis segundos na primeira abertura.; Depois da primeira abertura, o aplicativo vai direto à tela principal, mesmo após fechar por completo.",
+  "publishedAt": "2026-11-12T17:18:38Z"
 }
