@@ -1,11 +1,11 @@
 {
-    "schemaVersion":  1,
-    "applicationId":  "br.com.denny.somai",
-    "enabled":  true,
-    "latestVersionCode":  21,
-    "latestVersionName":  "1.9.10",
-    "apkUrl":  "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.10/Somai-1.9.10.apk",
-    "apkSha256":  "cdc3d8bb3a7932e5613b82a785a441584dfc5089345dc8fb0c6ec12bcbbef94e",
-    "releaseNotes":  "Favoritos, histórico de preços e telas de atualização e ajuda aprimoradas.",
-    "publishedAt":  "2026-11-11T20:36:31Z"
+  "schemaVersion": 1,
+  "applicationId": "br.com.denny.somai",
+  "enabled": true,
+  "latestVersionCode": 28,
+  "latestVersionName": "1.9.14",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.14/Somai-1.9.14.apk",
+  "apkSha256": "9864de4192e34d74b6e7d958b53282fd8ded074f5c044c6d116655b4f554a226",
+  "releaseNotes": "Listas reutilizáveis com checklist, importação de texto e compartilhamento.; Nova lista a partir de uma compra do histórico, com estimativa de total.; Comparação dos últimos preços registrados por supermercado.; Gastos e limites por categoria, com alertas de orçamento.; Busca nos favoritos por nome ou código de barras.; Backup de listas, limites, favoritos e preços, compatível com os arquivos anteriores.",
+  "publishedAt": "2026-11-12T11:58:21Z"
 }
