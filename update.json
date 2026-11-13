@@ -5,7 +5,7 @@
   "latestVersionCode": 30,
   "latestVersionName": "1.9.15",
   "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.15/Somai-1.9.15.apk",
-  "apkSha256": "c622a94ce83a333e52ee7bd2e5707a3eed7ea0a0d63148ee5e3083e21f6072ec",
-  "releaseNotes": "A logo animada do Somaí aparece por seis segundos na primeira abertura.; Depois da primeira abertura, o aplicativo vai direto à tela principal, mesmo após fechar por completo.",
+  "apkSha256": "012ab2ccf9cf5afebc5b87ef37c15ae838a7f7a9e6f29ce41ef66974778dc5e9",
+  "releaseNotes": "O total e o limite da compra aparecem juntos no cartão inicial.; Escanear e Adicionar item ficam lado a lado, e o carrinho aparece antes dos atalhos.; A logo animada do Somaí aparece por seis segundos na primeira abertura.; Depois da primeira abertura, o aplicativo vai direto à tela principal, mesmo após fechar por completo.",
   "publishedAt": "2026-11-12T17:18:38Z"
 }
