@@ -1,5 +1,44 @@
 import { getPlayStoreUrl } from './downloads.js';
 
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = menuToggle.closest('.site-nav');
+const menu = document.getElementById(menuToggle.getAttribute('aria-controls'));
+const mobileMenu = matchMedia('(max-width: 900px)');
+
+function setMenuOpen(open) {
+  menuToggle.setAttribute('aria-expanded', String(open));
+}
+
+siteNav.classList.add('is-menu-enhanced');
+menuToggle.hidden = false;
+menuToggle.addEventListener('click', () => {
+  setMenuOpen(menuToggle.getAttribute('aria-expanded') === 'false');
+});
+
+siteNav.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || menuToggle.getAttribute('aria-expanded') !== 'true') return;
+  setMenuOpen(false);
+  menuToggle.focus();
+});
+
+menu.addEventListener('click', (event) => {
+  const link = event.target.closest('a');
+  if (!link || !mobileMenu.matches) return;
+  setMenuOpen(false);
+  const section = document.getElementById(link.hash.slice(1));
+  section.tabIndex = -1;
+  section.focus({ preventScroll: true });
+});
+
+document.addEventListener('click', (event) => {
+  if (!siteNav.contains(event.target)) setMenuOpen(false);
+});
+
+mobileMenu.addEventListener('change', () => {
+  setMenuOpen(false);
+  if (mobileMenu.matches && menu.contains(document.activeElement)) menuToggle.focus();
+});
+
 const tabs = [...document.querySelectorAll('.screen-tabs [role="tab"]')];
 
 function showScreen(selectedTab) {
