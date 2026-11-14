@@ -54,16 +54,46 @@ PY
   adb shell input tap "$x" "$y"
 }
 
-adb shell mkdir -p /sdcard/Download
-adb push "$apk" "/sdcard/Download/$apk"
-adb shell am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d "file:///sdcard/Download/$apk" >/dev/null || true
-adb shell am start -a android.intent.action.VIEW_DOWNLOADS >/dev/null 2>&1 || adb shell am start -a android.intent.action.MAIN -c android.intent.category.APP_FILES >/dev/null 2>&1 || true
+adb root || true
+adb wait-for-device
+adb shell setprop persist.sys.locale pt-BR || true
+adb shell stop || true
+adb shell start || true
+sleep 11
+for attempt in $(seq 1 10); do
+  adb shell pm list packages android | grep -q 'package:android' && break
+  sleep 3
+done
+adb shell input keyevent 82 || true
+
+media=content://media/external_primary/downloads
+adb shell content insert --uri "$media" --bind "_display_name:s:$apk" --bind 'mime_type:s:application/vnd.android.package-archive' --bind 'relative_path:s:Download/' --bind 'is_pending:i:1' || true
+id="$(adb shell content query --uri "$media" --projection _id:_display_name --where "is_pending=1" | grep -F "$apk" | sed -n 's/.*_id=\([0-9][0-9]*\),.*/\1/p' | head -n 1)" || true
+if [[ -n "$id" ]]; then
+  adb shell content write --uri "$media/$id" < "$apk"
+  adb shell content update --uri "$media/$id" --bind is_pending:i:0
+else
+  adb shell mkdir -p /sdcard/Download
+  adb push "$apk" "/sdcard/Download/$apk"
+fi
+adb shell ls -l /sdcard/Download
+adb shell am start -W -a android.intent.action.VIEW_DOWNLOADS || adb shell am start -W -a android.intent.action.MAIN -c android.intent.category.APP_FILES || true
 sleep 3
 dump downloads || true
+if ! grep -Fq "$apk" "$out/downloads.xml"; then
+  adb shell am start -W -a android.intent.action.VIEW -d 'content://com.android.externalstorage.documents/document/primary%3ADownload' -t 'vnd.android.document/directory' --grant-read-uri-permission || true
+  sleep 3
+  dump downloads || true
+fi
 capture downloads
 
 if ! tap_text downloads "$apk"; then
-  adb shell am start -a android.intent.action.VIEW -d "file:///sdcard/Download/$apk" -t application/vnd.android.package-archive >/dev/null 2>&1 || true
+  echo 'Abrindo pela URI do arquivo.'
+  if [[ -n "$id" ]]; then
+    adb shell am start -W -a android.intent.action.VIEW -d "$media/$id" -t application/vnd.android.package-archive --grant-read-uri-permission || true
+  else
+    adb shell am start -W -a android.intent.action.VIEW -d "content://com.android.externalstorage.documents/document/primary%3ADownload%2F$apk" -t application/vnd.android.package-archive --grant-read-uri-permission || true
+  fi
 fi
 sleep 3
 dump source || true
@@ -72,13 +102,18 @@ if tap_text source 'settings|configurações'; then
   sleep 3
   dump permission || true
   capture permission
-  if tap_text permission 'allow from this source|permitir desta fonte'; then
+  if tap_text permission 'allow from this source|permitir desta fonte|permitir dessa fonte'; then
     adb shell input keyevent 4
     sleep 3
   fi
 fi
 dump installer || true
 capture installer
+if tap_text installer 'install|instalar'; then
+  sleep 5
+  dump installed || true
+  capture installed
+fi
 
 adb install -r "$apk"
 adb shell pm clear "$package"
