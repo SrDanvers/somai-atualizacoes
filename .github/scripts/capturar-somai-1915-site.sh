@@ -66,16 +66,12 @@ for attempt in $(seq 1 10); do
 done
 adb shell input keyevent 82 || true
 
-media=content://media/external_primary/downloads
-adb shell content insert --uri "$media" --bind "_display_name:s:$apk" --bind 'mime_type:s:application/vnd.android.package-archive' --bind 'relative_path:s:Download/' --bind 'is_pending:i:1' || true
-id="$(adb shell content query --uri "$media" --projection _id:_display_name --where "is_pending=1" | grep -F "$apk" | sed -n 's/.*_id=\([0-9][0-9]*\),.*/\1/p' | head -n 1)" || true
-if [[ -n "$id" ]]; then
-  adb shell content write --uri "$media/$id" < "$apk"
-  adb shell content update --uri "$media/$id" --bind is_pending:i:0
-else
-  adb shell mkdir -p /sdcard/Download
-  adb push "$apk" "/sdcard/Download/$apk"
-fi
+adb shell mkdir -p /sdcard/Download
+adb push "$apk" "/sdcard/Download/$apk"
+adb shell sha256sum "/sdcard/Download/$apk" | grep -F '012ab2ccf9cf5afebc5b87ef37c15ae838a7f7a9e6f29ce41ef66974778dc5e9'
+adb shell am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d "file:///sdcard/Download/$apk" >/dev/null || true
+adb shell cmd appops set com.google.android.documentsui REQUEST_INSTALL_PACKAGES deny || true
+adb shell cmd appops set com.android.documentsui REQUEST_INSTALL_PACKAGES deny || true
 adb shell ls -l /sdcard/Download
 adb shell am start -W -a android.intent.action.VIEW_DOWNLOADS || adb shell am start -W -a android.intent.action.MAIN -c android.intent.category.APP_FILES || true
 sleep 3
@@ -89,11 +85,7 @@ capture downloads
 
 if ! tap_text downloads "$apk"; then
   echo 'Abrindo pela URI do arquivo.'
-  if [[ -n "$id" ]]; then
-    adb shell am start -W -a android.intent.action.VIEW -d "$media/$id" -t application/vnd.android.package-archive --grant-read-uri-permission || true
-  else
-    adb shell am start -W -a android.intent.action.VIEW -d "content://com.android.externalstorage.documents/document/primary%3ADownload%2F$apk" -t application/vnd.android.package-archive --grant-read-uri-permission || true
-  fi
+  adb shell am start -W -a android.intent.action.VIEW -d "content://com.android.externalstorage.documents/document/primary%3ADownload%2F$apk" -t application/vnd.android.package-archive --grant-read-uri-permission || true
 fi
 sleep 3
 dump source || true
@@ -102,12 +94,31 @@ if tap_text source 'settings|configurações'; then
   sleep 3
   dump permission || true
   capture permission
-  if tap_text permission 'allow from this source|permitir desta fonte|permitir dessa fonte'; then
+  if tap_text permission 'allow from this source|permitir desta fonte|permitir dessa fonte|permitir desta origem|permitir desta fonte de apps|permitir desta origem de apps'; then
     adb shell input keyevent 4
     sleep 3
   fi
 fi
+if [[ ! -s "$out/permission.png" ]]; then
+  docs="$(adb shell cmd package resolve-activity --brief -a android.intent.action.VIEW_DOWNLOADS | tail -n 1 | cut -d/ -f1 | tr -d '\r')"
+  adb shell am start -W -a android.settings.MANAGE_UNKNOWN_APP_SOURCES -d "package:$docs" || true
+  sleep 2
+  dump permission || true
+  capture permission
+  adb shell input keyevent 4 || true
+fi
 dump installer || true
+if ! grep -Eiq 'text="(Install|Instalar)"' "$out/installer.xml"; then
+  printf '%s\n' 'Tentando a tela de confirmação com o APK local verificado.'
+  adb shell cmd appops set com.google.android.documentsui REQUEST_INSTALL_PACKAGES allow || true
+  adb shell cmd appops set com.android.documentsui REQUEST_INSTALL_PACKAGES allow || true
+  adb shell am start -W -a android.intent.action.VIEW_DOWNLOADS || true
+  sleep 2
+  dump downloads-new || true
+  tap_text downloads-new "$apk" || adb shell am start -W -a android.intent.action.VIEW -d "file:///sdcard/Download/$apk" -t application/vnd.android.package-archive || true
+  sleep 3
+  dump installer || true
+fi
 capture installer
 if tap_text installer 'install|instalar'; then
   sleep 5
