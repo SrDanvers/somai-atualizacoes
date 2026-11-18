@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 30,
-  "latestVersionName": "1.9.15",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v1.9.15/Somai-1.9.15.apk",
-  "apkSha256": "012ab2ccf9cf5afebc5b87ef37c15ae838a7f7a9e6f29ce41ef66974778dc5e9",
-  "releaseNotes": "O total e o limite da compra aparecem juntos no cartão inicial.; Escanear e Adicionar item ficam lado a lado, e o carrinho aparece antes dos atalhos.; A logo animada do Somaí aparece por seis segundos na primeira abertura.; Depois da primeira abertura, o aplicativo vai direto à tela principal, mesmo após fechar por completo.",
-  "publishedAt": "2026-11-12T17:18:38Z"
+  "latestVersionCode": 34,
+  "latestVersionName": "2.0.0",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.0/Somai-2.0.0.apk",
+  "apkSha256": "5ad35e367472433174721d33658124d5dcc491fd97e8c4b7d79ed05a2068bdc7",
+  "releaseNotes": "Planeje a compra com Fazer caber no limite, trave os produtos indispensáveis e compare embalagens e trocas em Qual compensa? Veja os preços confirmados, estimados e pendentes.",
+  "publishedAt": "2026-11-18T01:33:24Z"
 }
