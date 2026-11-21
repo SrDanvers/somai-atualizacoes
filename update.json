@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
-  "enabled": true,
-  "latestVersionCode": 34,
-  "latestVersionName": "2.0.0",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.0/Somai-2.0.0.apk",
-  "apkSha256": "5ad35e367472433174721d33658124d5dcc491fd97e8c4b7d79ed05a2068bdc7",
-  "releaseNotes": "Planeje a compra com Fazer caber no limite, trave os produtos indispensáveis e compare embalagens e trocas em Qual compensa? Veja os preços confirmados, estimados e pendentes.",
-  "publishedAt": "2026-11-18T01:33:24Z"
+  "enabled": false,
+  "latestVersionCode": 44,
+  "latestVersionName": "2.0.1",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.1/Somai-2.0.1.apk",
+  "apkSha256": "da06e83ab53a84df2e29e0d1acf22456ccdb7688464402bd4c1c9429ef930574",
+  "releaseNotes": "Nova Somaí 2.0.1 reconstruída a partir da base 2.0.0, com acesso rápido reorganizado, destaque maior para o valor restante, Somaí Pro em evidência e ícones renovados.",
+  "publishedAt": "2026-11-21T18:45:45Z"
 }
