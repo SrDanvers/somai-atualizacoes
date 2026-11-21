@@ -1,0 +1,47 @@
+name: Deixar somente Somaí 2.0.1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/deixar-somente-somai-201.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  limpar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remover releases antigas e criar somente v2.0.1
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -e
+          for tag in $(gh release list --repo "$GH_REPO" --limit 100 --json tagName --jq '.[].tagName'); do
+            if [ "$tag" != "v2.0.1" ]; then
+              gh release delete "$tag" --repo "$GH_REPO" --cleanup-tag --yes || true
+            fi
+          done
+
+          cat > /tmp/notes.md <<'NOTES'
+          Código: 44
+
+          - Nova Somaí 2.0.1 reconstruída a partir da base limpa 2.0.0.
+          - Acesso rápido com Históricos, Cupom fiscal, Minhas listas e Somaí Desktop.
+          - Destaque maior para o valor restante da compra.
+          - Somaí Pro com maior prioridade no cabeçalho.
+          - Históricos, Somaí Desktop e NFC preparados como recursos Pro na edição Google Play.
+          - Ícones vetoriais renovados, sem emojis.
+          NOTES
+
+          if gh release view "v2.0.1" --repo "$GH_REPO" >/dev/null 2>&1; then
+            gh release edit "v2.0.1" --repo "$GH_REPO" --title "Somaí 2.0.1" --notes-file /tmp/notes.md --latest
+          else
+            gh release create "v2.0.1" --repo "$GH_REPO" --title "Somaí 2.0.1" --notes-file /tmp/notes.md --latest
+          fi
+
+          echo "Releases restantes:"
+          gh release list --repo "$GH_REPO" --limit 100
