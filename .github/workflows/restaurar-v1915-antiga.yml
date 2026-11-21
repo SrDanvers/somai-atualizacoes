@@ -1,0 +1,42 @@
+name: Restaurar Somaí 1.9.15 como versão antiga
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/restaurar-v1915-antiga.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  restaurar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Criar release antiga v1.9.15
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -e
+          cat > /tmp/notes.md <<'NOTES'
+          ## Versão antiga
+
+          Esta é uma versão anterior do Somaí, mantida apenas para histórico e compatibilidade.
+
+          **Versão atual recomendada:** Somaí 2.0.1
+
+          - Nova tela inicial.
+          - Total e limite no mesmo cartão.
+          - Atalhos reorganizados.
+          - Mantida como versão antiga; não é a versão mais recente.
+          NOTES
+
+          if gh release view "v1.9.15" --repo "$GH_REPO" >/dev/null 2>&1; then
+            gh release edit "v1.9.15" --repo "$GH_REPO" --title "Somaí 1.9.15 — versão antiga" --notes-file /tmp/notes.md --latest=false
+          else
+            gh release create "v1.9.15" --repo "$GH_REPO" --title "Somaí 1.9.15 — versão antiga" --notes-file /tmp/notes.md --latest=false
+          fi
+
+          gh release edit "v2.0.1" --repo "$GH_REPO" --latest
