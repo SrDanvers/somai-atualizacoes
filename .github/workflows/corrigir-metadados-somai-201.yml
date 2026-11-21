@@ -1,0 +1,30 @@
+name: Corrigir texto da release Somaí 2.0.1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/corrigir-metadados-somai-201.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Corrigir somente titulo e descricao da release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          cat > /tmp/notes.md <<'NOTES'
+          Código: 36
+
+          - Modernização visual das janelas e do leitor de cupom fiscal.
+          - Ajustes de apresentação sem alteração do identificador do aplicativo.
+          - Atenção: a instalação desta compilação apresentou aviso do Google Play Protect e ainda não foi validada em aparelho. Não contorne avisos de segurança.
+          NOTES
+          gh release edit "v2.0.1" --repo "$GH_REPO" --title "Somaí 2.0.1 — Janelas modernizadas" --notes-file /tmp/notes.md
+          gh release view "v2.0.1" --repo "$GH_REPO" --json name,body --jq '.name + "\\n" + .body'
