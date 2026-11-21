@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
-  "enabled": true,
+  "enabled": false,
   "latestVersionCode": 44,
   "latestVersionName": "2.0.1",
   "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.1/Somai-2.0.1.apk",
