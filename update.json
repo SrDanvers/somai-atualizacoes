@@ -6,6 +6,6 @@
   "latestVersionName": "2.0.1",
   "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.1/Somai-2.0.1.apk",
   "apkSha256": "fbbfb97f75fa7124b211d35493f0fbad98f106f4fe233fe3780cac9a86e2d0cc",
-  "releaseNotes": "Nova apresentaÃ§Ã£o visual das caixas de diÃ¡logo e do leitor de cupom fiscal.; VersÃ£o disponibilizada a pedido do proprietÃ¡rio.; AtenÃ§Ã£o: esta compilaÃ§Ã£o apresentou alerta do Google Play Protect em instalaÃ§Ã£o anterior; nÃ£o hÃ¡ teste comprovando a correÃ§Ã£o.",
+  "releaseNotes": "Nova apresentação visual das caixas de diálogo e do leitor de cupom fiscal; versão disponibilizada a pedido do proprietário. Atenção: esta compilação apresentou alerta do Google Play Protect em instalação anterior; ainda não há teste comprovando a correção.",
   "publishedAt": "2026-11-21T15:26:31Z"
 }
