@@ -5,7 +5,7 @@
 
 **Um jeito mais simples de acompanhar os produtos, conferir preços e organizar as compras no Android.**
 
-[Conhecer o aplicativo](#sobre-o-somaí) · [Capturas reais](#capturas-reais-do-aplicativo) · [Baixar Somaí 2.0.1](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.1/Somai-2.0.1.apk)
+[Conhecer o aplicativo](#sobre-o-somaí) · [Capturas reais](#capturas-reais-do-aplicativo) · [Baixar Somaí 2.0.6](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.6/Somai-2.0.6.apk)
 
 **Android • Português do Brasil • Sem anúncios • Sem cadastro**
 
@@ -13,21 +13,18 @@
 
 ---
 
-## Versão atual — Somaí 2.0.1
+## Versão atual — Somaí 2.0.6
 
-**Versão:** 2.0.1  
-**Código:** 44  
+**Versão:** 2.0.6  
+**Código:** 48  
 **Distribuição:** APK oficial pelo GitHub
 
-[**Baixar Somaí 2.0.1**](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.1/Somai-2.0.1.apk) · [Ver release](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.1)
+[**Baixar Somaí 2.0.6**](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.6/Somai-2.0.6.apk) · [Ver release](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.6)
 
-### Novidades da 2.0.1
+### Novidades da 2.0.6
 
-- Acesso rápido reorganizado com **Históricos**, **Cupom fiscal**, **Minhas listas** e **Somaí Desktop**;
-- valor **Restam R$** com maior destaque durante a compra;
-- **Somaí Pro** em evidência no cabeçalho;
-- Históricos, Somaí Desktop e NFC preparados como recursos Pro na edição Google Play;
-- ícones renovados com visual vetorial, sem emojis.
+- O scanner exibe a confirmação **Produto reconhecido** ao identificar o produto.
+- A tela de leitura de QR Code ganhou uma guia de enquadramento e a opção de fotografar o código do Somaí Desktop.
 
 ---
 
@@ -37,7 +34,7 @@
 >
 > **Ainda não existe uma página oficial de instalação na Play Store.** O link será publicado aqui somente quando a versão for disponibilizada na loja. O lançamento depende de testes, requisitos da plataforma e aprovação.
 
-Enquanto isso, a versão pública atual é o **Somaí 2.0.1**, disponível em [Releases](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.1).
+Enquanto isso, a versão pública atual é o **Somaí 2.0.6**, disponível em [Releases](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.6).
 
 ## Sobre o Somaí
 
