@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 44,
-  "latestVersionName": "2.0.1",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.1/Somai-2.0.1.apk",
-  "apkSha256": "da06e83ab53a84df2e29e0d1acf22456ccdb7688464402bd4c1c9429ef930574",
-  "releaseNotes": "Somaí 2.0.1: acesso rápido reorganizado com Históricos, Cupom fiscal, Minhas listas e Somaí Desktop; valor restante com maior destaque; Somaí Pro em evidência; ícones renovados.",
-  "publishedAt": "2026-11-21T18:45:45Z"
+  "latestVersionCode": 48,
+  "latestVersionName": "2.0.6",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.6/Somai-2.0.6.apk",
+  "apkSha256": "d64a32ace1bb9f0f1b1cb635833c07c92e8b90c33eeae2b1fe310eb63f3a6537",
+  "releaseNotes": "O scanner exibe a confirmação “Produto reconhecido” ao identificar o produto.; A tela de leitura de QR Code ganhou uma guia de enquadramento e a opção de fotografar o código do Somaí Desktop.",
+  "publishedAt": "2026-11-23T19:27:36Z"
 }
