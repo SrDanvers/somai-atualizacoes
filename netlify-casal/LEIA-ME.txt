@@ -1,0 +1,37 @@
+Hospedagem do Modo Casal do Somaí no Netlify
+
+Este projeto serve a API HTTPS já usada pelo APK Somaí 2.0.7. A publicação
+mantém o carrinho disponível sem deixar um computador ligado. Use um projeto
+novo do Netlify para esta API.
+
+Publicar com a CLI
+
+1. Extraia o ZIP e abra a pasta netlify-casal no PowerShell. Use Node.js 22
+   ou mais recente.
+2. Execute npm install.
+3. Execute npx netlify-cli login e entre em sua conta do Netlify.
+4. Execute npx netlify-cli sites:create para criar e vincular um projeto novo ou use
+   npx netlify-cli link se o projeto já existir na sua conta.
+5. Execute npx netlify-cli deploy --prod --dir=public --functions=netlify/functions.
+
+Também é possível importar um repositório que contenha apenas a pasta
+netlify-casal como raiz. O Netlify usa netlify.toml e package.json para
+localizar as funções e instalar a dependência.
+
+Verificar a publicação
+
+Abra https://SEU-PROJETO.netlify.app/health e confira se aparece {"ok":true}.
+No Somaí 2.0.7, use Modo Casal > Criar carrinho e cole o domínio HTTPS,
+sem /health. O QR distribui o endereço ao segundo celular.
+Para tirar o campo de endereço de uma próxima versão do APK, é necessário
+incorporar o domínio definitivo na compilação Android.
+
+O carrinho fica acessível por até 12 horas. A função programada limpa dados
+expirados a cada 15 minutos quando a limpeza é executada com sucesso.
+O servidor guarda os nomes escolhidos, itens, valores e marcações. O convite
+permite a entrada de uma segunda pessoa. A autenticação do carrinho é
+independente do login de administração do Netlify.
+
+Documentação
+https://docs.netlify.com/build/functions/get-started/
+https://docs.netlify.com/build/data-and-storage/netlify-blobs/
