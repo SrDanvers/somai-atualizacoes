@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 48,
-  "latestVersionName": "2.0.6",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.6/Somai-2.0.6.apk",
-  "apkSha256": "d64a32ace1bb9f0f1b1cb635833c07c92e8b90c33eeae2b1fe310eb63f3a6537",
-  "releaseNotes": "O scanner exibe a confirmação “Produto reconhecido” ao identificar o produto.; A tela de leitura de QR Code ganhou uma guia de enquadramento e a opção de fotografar o código do Somaí Desktop.",
-  "publishedAt": "2026-11-23T19:27:36Z"
+  "latestVersionCode": 52,
+  "latestVersionName": "2.0.8",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.8/Somai-2.0.8.apk",
+  "apkSha256": "23eb0dafdca505f7c9a7ae72b1b494921e89ccd856ab2770a229096193fe09a7",
+  "releaseNotes": "Modo Casal na tela inicial, com servidor online já configurado.; Convide outra pessoa por QR Code. O carrinho mostra quem pegou cada produto e atualiza o total para os dois.; Fazer caber no limite está no menu Mais.",
+  "publishedAt": "2026-11-25T01:39:24Z"
 }
