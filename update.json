@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "applicationId": "br.com.denny.somai",
   "enabled": true,
-  "latestVersionCode": 52,
-  "latestVersionName": "2.0.8",
-  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.8/Somai-2.0.8.apk",
-  "apkSha256": "23eb0dafdca505f7c9a7ae72b1b494921e89ccd856ab2770a229096193fe09a7",
-  "releaseNotes": "Modo Casal na tela inicial, com servidor online já configurado.; Convide outra pessoa por QR Code. O carrinho mostra quem pegou cada produto e atualiza o total para os dois.; Fazer caber no limite está no menu Mais.",
-  "publishedAt": "2026-11-25T01:39:24Z"
+  "latestVersionCode": 58,
+  "latestVersionName": "2.0.9",
+  "apkUrl": "https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.9/Somai-2.0.9.apk",
+  "apkSha256": "6336c84034ebe792a984aa9be66e229c19f8fb87087d41be25b3b6e2b094282d",
+  "releaseNotes": "O Android ganhou menus e avisos nos temas claro e escuro, ajuste da rolagem da tela inicial e acesso ao limite da compra logo abaixo do total.; O Somaí Desktop para Windows de 64 bits guarda compras finalizadas, cupons fiscais e fotos de etiquetas. O painel permite consultar o conteúdo de cada backup.",
+  "publishedAt": "2026-11-28T13:08:17Z"
 }
