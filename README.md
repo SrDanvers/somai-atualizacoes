@@ -5,7 +5,7 @@
 
 **Um jeito mais simples de acompanhar os produtos, conferir preços e organizar as compras no Android.**
 
-[Conhecer o aplicativo](#sobre-o-somaí) · [Capturas reais](#capturas-reais-do-aplicativo) · [Baixar Somaí 2.0.6](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.6/Somai-2.0.6.apk)
+[Conhecer o aplicativo](#sobre-o-somaí) · [Capturas reais](#capturas-reais-do-aplicativo) · [Baixar Somaí 2.0.9](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.9/Somai-2.0.9.apk) · [Baixar para Windows](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.9/Somai-Desktop-Windows-x64.zip)
 
 **Android • Português do Brasil • Sem anúncios • Sem cadastro**
 
@@ -13,18 +13,22 @@
 
 ---
 
-## Versão atual — Somaí 2.0.6
+## Versão atual — Somaí 2.0.9
 
-**Versão:** 2.0.6  
-**Código:** 48  
+**Versão:** 2.0.9  
+**Código:** 58  
 **Distribuição:** APK oficial pelo GitHub
 
-[**Baixar Somaí 2.0.6**](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.6/Somai-2.0.6.apk) · [Ver release](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.6)
+[**Baixar Somaí 2.0.9**](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.9/Somai-2.0.9.apk) · [Ver release](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.9)
 
-### Novidades da 2.0.6
+### Novidades da 2.0.9
 
-- O scanner exibe a confirmação **Produto reconhecido** ao identificar o produto.
-- A tela de leitura de QR Code ganhou uma guia de enquadramento e a opção de fotografar o código do Somaí Desktop.
+- Os menus do carrinho, as confirmações e os avisos acompanham os temas claro e escuro. O limite da compra fica abaixo do total.
+- O Somaí Desktop guarda no computador as compras finalizadas, os cupons fiscais e as fotos de etiquetas recebidos do celular. O histórico permite abrir cada cópia e consultar seu conteúdo.
+
+### Somaí Desktop para Windows de 64 bits
+
+[Baixe o instalador para Windows](https://github.com/SrDanvers/somai-atualizacoes/releases/download/v2.0.9/Somai-Desktop-Windows-x64.zip), extraia o ZIP e execute `Instalar-Somai-Desktop.exe`. No computador, clique em **Conectar celular → Conectar por QR Code**. Com os dois aparelhos na mesma rede Wi-Fi, abra **Somaí Desktop → Conectar com QR Code do PC** no Android e escaneie o código. Toque em **Sincronizar agora** no celular para enviar a primeira cópia.
 
 ---
 
@@ -34,7 +38,7 @@
 >
 > **Ainda não existe uma página oficial de instalação na Play Store.** O link será publicado aqui somente quando a versão for disponibilizada na loja. O lançamento depende de testes, requisitos da plataforma e aprovação.
 
-Enquanto isso, a versão pública atual é o **Somaí 2.0.6**, disponível em [Releases](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.6).
+Enquanto isso, a versão pública atual é o **Somaí 2.0.9**, disponível em [Releases](https://github.com/SrDanvers/somai-atualizacoes/releases/tag/v2.0.9).
 
 ## Sobre o Somaí
 
